@@ -10,9 +10,11 @@ export default function Sidebar() {
       </div>
       <div className="side-filters">
         <p>All</p>
-        <p>All</p>
-        <p>All</p>
-        <p>All</p>
+        <p>UI</p>
+        <p>UX</p>
+        <p>Enhancement </p>
+        <p>Bug</p>
+        <p>Feature</p>
       </div>
 
       <div className="roadmap">

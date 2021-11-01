@@ -3,7 +3,7 @@
 }
 
 .top-sidebar {
-  height: 10vh;
+  height: 15vh;
   width: 15vw;
   background: radial-gradient(
     128.88% 128.88% at 103.9% -10.39%,
@@ -12,6 +12,11 @@
     #28a7ed 100%
   );
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+ justify-content: center;
+  align-items:center;
+  
 }
 
 .top-sidebar h1 {
@@ -23,4 +28,25 @@
   color: #ffffff;
   mix-blend-mode: normal;
   opacity: 0.75;
+  font-weight: 400;
+}
+
+.side-filters {
+  background: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  
+  align-items: center;
+  padding: 1rem;
+  color: #4661E6;
+ 
+}
+
+.side-filters p {
+  padding: .5rem 1rem;
+  background: #F2F4FF;
+  border-radius: 10px;
+  margin: .5rem;
+  
 }
