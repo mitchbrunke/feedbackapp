@@ -8,12 +8,16 @@ import "./App.css";
 import Home from "./pages/home/Home";
 import Create from "./pages/create/Create";
 import Detail from "./pages/detail/Detail";
+import Roadmap from "./pages/roadmap/roadmap";
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Switch>
+          <Route path="/roadmap">
+            <Roadmap />
+          </Route>
           <Route path="/detail/:id">
             <Detail />
           </Route>

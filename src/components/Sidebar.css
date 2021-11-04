@@ -14,9 +14,8 @@
   border-radius: 10px;
   display: flex;
   flex-direction: column;
- justify-content: center;
-  align-items:center;
-  
+  justify-content: center;
+  align-items: center;
 }
 
 .top-sidebar h1 {
@@ -36,17 +35,80 @@
   border-radius: 10px;
   display: flex;
   flex-wrap: wrap;
-  
+  margin: 1.5rem 0;
   align-items: center;
   padding: 1rem;
-  color: #4661E6;
- 
+  color: #4661e6;
+}
+
+.side-filters .active {
+  background: #4661e6;
+  color: white;
 }
 
 .side-filters p {
-  padding: .5rem 1rem;
-  background: #F2F4FF;
+  padding: 0.5rem 1rem;
+  background: #f2f4ff;
   border-radius: 10px;
-  margin: .5rem;
-  
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+.side-filters p:hover {
+  background: #4661e6;
+  color: white;
+}
+
+.roadmap {
+  background-color: white;
+  border-radius: 10px;
+}
+
+.top-cont {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+}
+
+.road-item {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+}
+
+.road-item-cont {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.road-item-cont p {
+  padding-left: 0.5rem;
+}
+
+.dot {
+  height: 0.7rem;
+  width: 0.7rem;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+#planned {
+  background-color: #f49f85;
+}
+
+#inprog {
+  background-color: #ad1fea;
+}
+
+#live {
+  background-color: #62bcfa;
 }

@@ -1,3 +1,6 @@
+//react
+import { Link } from "react-router-dom";
+
 //styles
 import "./Sidebar.css";
 
@@ -9,7 +12,7 @@ export default function Sidebar() {
         <h6>Feedback Board</h6>
       </div>
       <div className="side-filters">
-        <p>All</p>
+        <p className="active">All</p>
         <p>UI</p>
         <p>UX</p>
         <p>Enhancement </p>
@@ -19,19 +22,30 @@ export default function Sidebar() {
 
       <div className="roadmap">
         <div className="top-cont">
-          <h5>Roadmap</h5>
-          <p>View</p>
+          <h2>Roadmap</h2>
+          <Link to="/roadmap">
+            <p>View</p>
+          </Link>
         </div>
         <div className="road-item">
-          <p>Planned</p>
+          <div className="road-item-cont">
+            <span className="dot" id="planned"></span>
+            <p>Planned</p>
+          </div>
           <p>8</p>
         </div>
         <div className="road-item">
-          <p>In-Progress</p>
+          <div className="road-item-cont">
+            <span className="dot" id="inprog"></span>
+            <p>In-Progress</p>
+          </div>
           <p>3</p>
         </div>
         <div className="road-item">
-          <p>Live</p>
+          <div className="road-item-cont">
+            <span className="dot" id="live"></span>
+            <p>Live</p>
+          </div>
           <p>1</p>
         </div>
       </div>
