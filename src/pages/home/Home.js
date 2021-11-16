@@ -1,9 +1,7 @@
 //react
 import { useEffect, useState } from "react";
-
-//firebase
-import { db } from "../../firebase/config";
-import { collection, onSnapshot } from "firebase/firestore";
+import { useSelector, useDispatch } from "react-redux";
+import { getFeedbackAsync } from "../../redux/feedbackSlice";
 
 //styles
 import Sidebar from "../../components/Sidebar";
@@ -11,29 +9,23 @@ import "./Home.css";
 import ProductRequestList from "../../components/productRequestList/requestLits";
 
 export default function Home() {
-  const [requests, setRequests] = useState(null);
+  const dispatch = useDispatch();
+  const feedbackItems = useSelector((state) => state.feedback);
 
   useEffect(() => {
-    let requestRef = collection(db, "productRequests");
-
-    const unsub = onSnapshot(requestRef, (snapshot) => {
-      let results = [];
-      snapshot.docs.forEach((doc) => {
-        results.push({ id: doc.id, ...doc.data() });
-      });
-      setRequests(results);
-    });
-  }, []);
+    dispatch(getFeedbackAsync());
+  }, [dispatch]);
 
   return (
     <div className="home">
-      {console.log(requests)}
       <div className="sidebar">
         <Sidebar />
       </div>
 
+      <img src="./user-images/image-suzanne.jpg" alt="" />
+
       <div className="content">
-        <ProductRequestList requests={requests} />
+        <ProductRequestList />
       </div>
     </div>
   );
