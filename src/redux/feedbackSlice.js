@@ -5,7 +5,7 @@ export const getFeedbackAsync = createAsyncThunk(
   "feedback/getFeedbackAsync",
   async () => {
     try {
-      const response = await fetch("http://localhost:3000/productRequests");
+      const response = await fetch("http://localhost:3004/productRequests");
       const feedbackItems = await response.json();
       return { feedbackItems };
     } catch (err) {
